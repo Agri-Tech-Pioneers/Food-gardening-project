@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Gardening Project</title>
+  <style>
+    /* Basic colourful styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0fff0;
+      color: #333;
+    }
+
+    header {
+      background: #4caf50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background: #81c784;
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #004d00;
+    }
+
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .crops-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .crops-gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .crops-gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌱 Food Gardening Project 🌽</h1>
+    <p>Learn how to grow your own healthy food</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#tips">Tips</a>
+    <a href="#crops">Crops</a>
+    <a href="#chatbot">Chatbot</a>
+  </nav>
+
+  <main id="home">
+    <h2>Welcome to Food Gardening</h2>
+    <p>Discover how to grow fresh vegetables, fruits, and herbs right at home.</p>
+  </main>
+
+  <main id="tips">
+    <h2>Gardening Tips</h2>
+    <ul>
+      <li>🌞 Ensure at least 6 hours of sunlight.</li>
+      <li>💧 Water plants regularly but don’t overwater.</li>
+      <li>🌱 Use compost to enrich your soil.</li>
+      <li>🪴 Grow seasonal crops for best results.</li>
+    </ul>
+  </main>
+
+  <main id="crops">
+    <h2>Our Crops</h2>
+    <div class="crops-gallery">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Tomato_je.jpg" alt="Tomatoes">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Spinach_leaves.jpg" alt="Spinach">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Carrots.jpg" alt="Carrots">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Corncobs.jpg" alt="Maize">
+    </div>
+  </main>
+
+  <main id="chatbot">
+    <h2>Gardening Chatbot</h2>
+    <p>🤖 Coming soon... Ask questions about crops, pests, and diseases!</p>
+  </main>
+
+</body>
+</html>
