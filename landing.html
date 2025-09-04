@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Gardening - Welcome</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #a8e063, #56ab2f);
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      padding: 100px 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+    }
+
+    button {
+      background: #fff;
+      color: #4caf50;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    /* Chatbot box */
+    #chatbot {
+      margin-top: 50px;
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
+      width: 300px;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: left;
+    }
+
+    #chatlog {
+      height: 200px;
+      overflow-y: scroll;
+      border: 1px solid #ccc;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    input, button.send {
+      width: calc(100% - 12px);
+      padding: 5px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🌱 Welcome to Food Gardening</h1>
+    <p>Learn how to grow fresh vegetables, fruits, and herbs at home. Get tips, crop guides, and instant help with our chatbot!</p>
+    <button onclick="goToWebsite()">Start Exploring</button>
+
+    <!-- Chatbot -->
+    <div id="chatbot">
+      <div id="chatlog"></div>
+      <input type="text" id="userInput" placeholder="Ask me about plants or pests...">
+      <button class="send" onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    function goToWebsite() {
+      window.location.href = "index.html"; // change this to your main site file
+    }
+
+    // Simple simulated chatbot
+    const responses = {
+      "tomato": "Tomatoes grow best in sunny spots with well-drained soil.",
+      "spinach": "Spinach likes cool weather and consistent watering.",
+      "pests": "Common pests: aphids, caterpillars. Use neem oil or insecticidal soap.",
+      "disease": "Common diseases: blight, powdery mildew. Remove infected leaves and improve airflow."
+    };
+
+    function sendMessage() {
+      const input = document.getElementById("userInput").value.toLowerCase();
+      const chatlog = document.getElementById("chatlog");
+      let reply = "Sorry, I don't know that yet.";
+
+      for (const key in responses) {
+        if (input.includes(key)) {
+          reply = responses[key];
+        }
+      }
+
+      chatlog.innerHTML += `<p><strong>You:</strong> ${input}</p>`;
+      chatlog.innerHTML += `<p><strong>Bot:</strong> ${reply}</p>`;
+      chatlog.scrollTop = chatlog.scrollHeight;
+      document.getElementById("userInput").value = "";
+    }
+  </script>
+
+</body>
+</html>
